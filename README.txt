@@ -5,8 +5,12 @@
     PLATFORM_NAME: Android
     PLATFORM_VERSION: 9
     DEVICE_NAME: emulator-5554
- - java version 1.8 or more
- if another emulator is used, make proper settings in file "src/main/java/app/AndroidDriverCapabilities.java"
+ - java version 1.8 or higher
+ if another emulator is used or if real device is needed, make proper settings in file "src/main/java/app/AndroidDriverCapabilities.java"
+
+Links:
+Android SDK - https://developer.android.com/studio
+Appium - http://appium.io/
 
 === Available ways to run tests ===
 
