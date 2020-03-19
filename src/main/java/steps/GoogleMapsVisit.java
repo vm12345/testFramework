@@ -24,6 +24,7 @@ public class GoogleMapsVisit {
     private AppiumDriver driver = testSettigns.getDriver();
     private WebDriverWait webDriverWait = testSettigns.getWebDriverWait();
 
+    // This step setting value from scenario into textView in google maps and then choose first value from dropdown list
     @SuppressWarnings("unchecked")
     @And("find first value {string} with category {string}")
     public void findValue(String valueFromFeature, String category) {
@@ -36,6 +37,7 @@ public class GoogleMapsVisit {
         driver.navigate().back();
     }
 
+    // This step setting value from scenario into textView in google maps and then choose random value from dropdown list
     @SuppressWarnings({"unchecked", "ResultOfMethodCallIgnored"})
     @And("find random value {string} with category {string}")
     public void findRandomValue(String valuesFromFeature, String category) {

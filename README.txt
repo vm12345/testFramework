@@ -30,7 +30,10 @@ Then open project in Intellij idea, set up SDK in IDEA settings.
 You need to set a device name into DesiredCapabilities in 'src/main/java/app/AndroidDriverCapabilities.java'
 
 === Available ways to run tests ===
+1 Run device(if real - connect to computer and make sure it is on 'List of devices attached', if emulator - run emulator from Intellij Idea)
 
-1 Maven - open console and run command 'mvn test'
-2 open file RunCucumberSteps.java and run it as JUNIT test
-3 run as separate scenarios within IDE(Intellij IDEA is required)
+Do one of offered solutions
+
+2 Maven - open console and run command 'mvn test'
+3 open file RunCucumberSteps.java and run it as JUNIT test
+4 run as separate scenarios within IDE(Intellij Idea is required)

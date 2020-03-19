@@ -19,7 +19,7 @@ public class AndroidDriverCapabilities {
     public static AndroidDriverCapabilities getInstance() {
         return CAPABILITIES;
     }
-
+// This is a capabilities for testing
     public DesiredCapabilities getDesiredCapabilities() {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
