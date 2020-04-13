@@ -37,9 +37,13 @@ public class UIandAPITests {
             try {
                 GetRequest getRequest = Unirest.get("http://api.currencylayer.com/live?access_key=bc0d1388278fbda4627eba74f6550db9&source=" + sourceValue + "&currencies=" + sourceValue + "," + targetValue + "&format=1");
                 String fromAPI = String.valueOf(getRequest.asJson().getBody().getObject().getJSONObject("quotes").getDouble(sourceValue.concat(targetValue)));
+
                 Assert.assertEquals(Integer.parseInt(fromUI.substring(0, 3)), Integer.parseInt(fromAPI.substring(0, 3)));
-                // if you use code in line 42 - tests will fail because UI rate is not equals to API rate absolutely
+
+                // if you use code in line 44 - tests will fail because UI rate is not equals to API rate absolutely
 //                Asserts.check(fromUI.equals(fromAPI), "WRONG!");
+
+
             } catch (UnirestException e) {
                 e.getMessage();
                 e.printStackTrace();
