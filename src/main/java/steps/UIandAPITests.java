@@ -41,7 +41,7 @@ public class UIandAPITests {
                 Assert.assertEquals(Integer.parseInt(fromUI.substring(0, 3)), Integer.parseInt(fromAPI.substring(0, 3)));
 
                 // if you use code in line 44 - tests will fail because UI rate is not equals to API rate absolutely
-//                Asserts.check(fromUI.equals(fromAPI), "WRONG!");
+//                Assert.assertEquals(fromUI, fromAPI);
 
 
             } catch (UnirestException e) {
