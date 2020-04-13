@@ -6,10 +6,11 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+@SuppressWarnings("rawtypes")
 public class TestSettigns {
-    private AppiumDriver driver;
-    private WebDriverWait webDriverWait;
-    private AppiumDriverLocalService service = AppiumDriverLocalService
+    private final AppiumDriver driver;
+    private final WebDriverWait webDriverWait;
+    private final AppiumDriverLocalService service = AppiumDriverLocalService
             .buildService(new AppiumServiceBuilder().usingAnyFreePort());
 
     public TestSettigns() {
@@ -24,5 +25,9 @@ public class TestSettigns {
 
     public WebDriverWait getWebDriverWait() {
         return webDriverWait;
+    }
+
+    public AppiumDriverLocalService getService() {
+        return service;
     }
 }

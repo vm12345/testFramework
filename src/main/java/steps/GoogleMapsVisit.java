@@ -1,6 +1,7 @@
 package steps;
 
 import app.TestSettigns;
+import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
@@ -20,9 +21,9 @@ import java.util.Random;
  */
 @SuppressWarnings("rawtypes")
 public class GoogleMapsVisit {
-    private TestSettigns testSettigns = new TestSettigns();
-    private AppiumDriver driver = testSettigns.getDriver();
-    private WebDriverWait webDriverWait = testSettigns.getWebDriverWait();
+    private final TestSettigns testSettigns = new TestSettigns();
+    private final AppiumDriver driver = testSettigns.getDriver();
+    private final WebDriverWait webDriverWait = testSettigns.getWebDriverWait();
 
     // This step setting value from scenario into textView in google maps and then choose first value from dropdown list
     @SuppressWarnings("unchecked")
@@ -89,6 +90,12 @@ public class GoogleMapsVisit {
                 resultElements.add(mobileElement);
             }
         }
+
         return resultElements;
+    }
+
+    @After
+    public void shutDown(){
+        testSettigns.getDriver().quit();
     }
 }
